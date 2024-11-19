@@ -1,0 +1,20 @@
+{
+    "Type": "Live2D Expression",
+    "Parameters": [
+        {
+            "Id": "ParamBrowRForm",
+            "Value": "-0.532",
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamBrowLForm",
+            "Value": "-0.489",
+            "Blend": "Add"
+        },
+        {
+            "Id": "Param10",
+            "Value": "0.798",
+            "Blend": "Add"
+        }
+    ]
+}

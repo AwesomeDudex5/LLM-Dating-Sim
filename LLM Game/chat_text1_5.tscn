@@ -1,0 +1,405 @@
+[gd_scene load_steps=13 format=3 uid="uid://bw68s2k8c6t1b"]
+
+[ext_resource type="Script" path="res://chat_text1_5.gd" id="1_3j53n"]
+[ext_resource type="Texture2D" uid="uid://ddd4rctvlegnd" path="res://Sprites/Neutral.PNG" id="2_wlcw1"]
+[ext_resource type="Texture2D" uid="uid://6nnqk2h5bl76" path="res://Sprites/Lock_icon.png" id="3_m1yfl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6qyb2"]
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_u2cd3"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_ach21"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_djnfv"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_urr3g"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_v1t8f"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_7gwuk"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_uo211"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_www2n"]
+font_size = 13
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3j53n")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+offset_right = 54.0
+offset_bottom = 23.0
+
+[node name="Label2" type="Label" parent="HBoxContainer3"]
+layout_mode = 2
+text = "Model"
+
+[node name="FinishedLabel" type="Label" parent="HBoxContainer3"]
+visible = false
+layout_mode = 2
+label_settings = SubResource("LabelSettings_6qyb2")
+
+[node name="ModelName" type="Label" parent="HBoxContainer3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "User"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="InputEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 90)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/background_color = Color(0, 0, 0, 0.580392)
+text = "Put Responses Here and Send"
+wrap_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Explicit"
+horizontal_alignment = 1
+
+[node name="SexuallyExplicitOptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "HateSpeech"
+horizontal_alignment = 1
+
+[node name="HateSpeechOptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Harassment"
+horizontal_alignment = 1
+
+[node name="HarassmentOptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "DangerousContent"
+horizontal_alignment = 1
+
+[node name="DangerousContentOptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer"]
+layout_mode = 2
+text = "SexuallyExplicit"
+label_settings = SubResource("LabelSettings_u2cd3")
+horizontal_alignment = 1
+
+[node name="SexuallyExplicitStatus" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_ach21")
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer2"]
+layout_mode = 2
+text = "HateSpeech"
+label_settings = SubResource("LabelSettings_djnfv")
+horizontal_alignment = 1
+
+[node name="HateSpeechStatus" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer2"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_urr3g")
+horizontal_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer3"]
+layout_mode = 2
+text = "Harassment"
+label_settings = SubResource("LabelSettings_v1t8f")
+horizontal_alignment = 1
+
+[node name="HarassmentStatus" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer3"]
+layout_mode = 2
+text = "NEGLIGIBLE"
+label_settings = SubResource("LabelSettings_7gwuk")
+horizontal_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer4"]
+layout_mode = 2
+text = "DangerousContent"
+label_settings = SubResource("LabelSettings_uo211")
+horizontal_alignment = 1
+
+[node name="DangerousContentStatus" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer4"]
+layout_mode = 2
+text = "NEGLIGIBLE"
+label_settings = SubResource("LabelSettings_www2n")
+horizontal_alignment = 1
+
+[node name="Button UI" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 140.0
+offset_right = 1890.0
+offset_bottom = 812.0
+
+[node name="ColorRect" type="ColorRect" parent="Button UI"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 76.0
+offset_right = 623.0
+offset_bottom = 526.0
+color = Color(1, 1, 1, 0.282353)
+
+[node name="SendButton" type="Button" parent="Button UI"]
+layout_mode = 0
+offset_left = 809.0
+offset_top = -7.0
+offset_right = 1009.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 40
+text = "Send"
+
+[node name="HoldHandsButton" type="Button" parent="Button UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.43
+anchor_right = 0.5
+anchor_bottom = 0.43
+offset_left = 352.0
+offset_top = 0.179993
+offset_right = 701.0
+offset_bottom = 136.18
+theme_override_font_sizes/font_size = 30
+text = "Hold hand
+(with consent)"
+
+[node name="HoldHandsLock" type="Sprite2D" parent="Button UI/HoldHandsButton"]
+position = Vector2(-20, 40)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("3_m1yfl")
+
+[node name="Location" type="Label" parent="Button UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048
+anchor_top = 0.068
+anchor_right = 0.048
+anchor_bottom = 0.068
+offset_left = 92.24
+offset_top = 24.304
+offset_right = 464.24
+offset_bottom = 119.304
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 51
+text = "Go to Location"
+
+[node name="ParkButton" type="Button" parent="Button UI"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 150.0
+offset_right = 298.0
+offset_bottom = 232.0
+theme_override_font_sizes/font_size = 50
+text = "Park"
+
+[node name="ParkLock" type="Sprite2D" parent="Button UI/ParkButton"]
+position = Vector2(109, 32)
+scale = Vector2(0.199219, 0.199219)
+texture = ExtResource("3_m1yfl")
+
+[node name="CafeButton" type="Button" parent="Button UI"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 150.0
+offset_right = 576.0
+offset_bottom = 232.0
+theme_override_font_sizes/font_size = 50
+text = "Cafe
+"
+
+[node name="CafeLock" type="Sprite2D" parent="Button UI/CafeButton"]
+position = Vector2(111, 31)
+scale = Vector2(0.199219, 0.199219)
+texture = ExtResource("3_m1yfl")
+
+[node name="MuseumButton" type="Button" parent="Button UI"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 270.0
+offset_right = 298.0
+offset_bottom = 352.0
+theme_override_font_sizes/font_size = 50
+text = "Museum"
+
+[node name="MuseumLock" type="Sprite2D" parent="Button UI/MuseumButton"]
+position = Vector2(115, 31)
+scale = Vector2(0.199219, 0.199219)
+texture = ExtResource("3_m1yfl")
+
+[node name="MallButton" type="Button" parent="Button UI"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 270.0
+offset_right = 576.0
+offset_bottom = 352.0
+theme_override_font_sizes/font_size = 50
+text = "Mall"
+
+[node name="MalltLock" type="Sprite2D" parent="Button UI/MallButton"]
+position = Vector2(113, 31)
+scale = Vector2(0.199219, 0.199219)
+texture = ExtResource("3_m1yfl")
+
+[node name="BeachButton" type="Button" parent="Button UI"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 392.0
+offset_right = 298.0
+offset_bottom = 474.0
+theme_override_font_sizes/font_size = 50
+text = "Beach
+"
+
+[node name="BeachLock" type="Sprite2D" parent="Button UI/BeachButton"]
+position = Vector2(114, 37)
+scale = Vector2(0.199219, 0.199219)
+texture = ExtResource("3_m1yfl")
+
+[node name="ApartmentButton" type="Button" parent="Button UI"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 392.0
+offset_right = 595.0
+offset_bottom = 518.0
+theme_override_font_sizes/font_size = 43
+text = "Tae's
+ Apartment"
+
+[node name="ApartmentLock" type="Sprite2D" parent="Button UI/ApartmentButton"]
+position = Vector2(112, 47)
+scale = Vector2(0.199219, 0.199219)
+texture = ExtResource("3_m1yfl")
+
+[node name="Image UI" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ImageBG" type="Sprite2D" parent="Image UI"]
+z_index = -2
+position = Vector2(952.5, 540.5)
+scale = Vector2(1.01302, 1.01574)
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Image UI"]
+layout_mode = 2
+offset_left = 268.0
+offset_top = 192.0
+offset_right = 1052.0
+offset_bottom = 192.0
+scale = Vector2(1.61085, 1.61085)
+
+[node name="SpriteAvatar" type="Sprite2D" parent="Image UI/HBoxContainer6"]
+position = Vector2(411, 202)
+scale = Vector2(0.564869, 0.564869)
+texture = ExtResource("2_wlcw1")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Image UI"]
+layout_mode = 2
+offset_left = 173.0
+offset_top = 833.0
+offset_right = 1760.0
+offset_bottom = 1006.0
+
+[node name="ResponseEdit" type="TextEdit" parent="Image UI/HBoxContainer2"]
+custom_minimum_size = Vector2(400, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/background_color = Color(0, 0, 0, 0.470588)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+editable = false
+wrap_mode = 1
+
+[node name="ResetButton" type="Button" parent="Image UI"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 840.0
+offset_right = 84.0
+offset_bottom = 871.0
+scale = Vector2(1.98954, 1.98954)
+text = "RESET"
+
+[connection signal="pressed" from="Button UI/SendButton" to="." method="_on_send_button_pressed"]
+[connection signal="pressed" from="Button UI/HoldHandsButton" to="." method="_on_hold_hands_button_pressed"]
+[connection signal="pressed" from="Button UI/ParkButton" to="." method="_on_park_button_pressed"]
+[connection signal="pressed" from="Button UI/CafeButton" to="." method="_on_cafe_button_pressed"]
+[connection signal="pressed" from="Button UI/MuseumButton" to="." method="_on_museum_button_pressed"]
+[connection signal="pressed" from="Button UI/MallButton" to="." method="_on_mall_button_pressed"]
+[connection signal="pressed" from="Button UI/BeachButton" to="." method="_on_beach_button_pressed"]
+[connection signal="pressed" from="Button UI/ApartmentButton" to="." method="_on_apartment_button_pressed"]
+[connection signal="pressed" from="Image UI/ResetButton" to="." method="_on_reset_button_pressed"]

@@ -1,0 +1,35 @@
+{
+    "Type": "Live2D Expression",
+    "Parameters": [
+        {
+            "Id": "ParamBrowRAngle",
+            "Value": "-1",
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamBrowLAngle",
+            "Value": "-1",
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamBrowRY",
+            "Value": "-1",
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamBrowLY",
+            "Value": "-1",
+            "Blend": "Add"
+        },
+        {
+            "Id": "Param8",
+            "Value": "0.723",
+            "Blend": "Add"
+        },
+        {
+            "Id": "Param9",
+            "Value": "1",
+            "Blend": "Add"
+        }
+    ]
+}
