@@ -229,21 +229,37 @@ func send_initial_prompt():
 
 
 func process_json_output_string(output_string):
+	 # Remove the Markdown code block syntax
+	var json_string = output_string.strip_edges()  # Trim whitespace
+	if json_string.begins_with("```json") and json_string.ends_with("```"):
+		json_string = json_string.trim_prefix("```json").trim_suffix("```").strip_edges()
+	
 	# Parse the JSON string
 	var json = JSON.new()
-	var data = json.parse_string(output_string)
-	#print("THIS IS SOMETHING YES"+str(data))
-	#return "testing"
-	var dict = data
+	var error = json.parse(json_string)
+	
+	if error != OK:
+		print("Failed to parse JSON: ", json.get_error_message())
+		print("JSON String: ", json_string)  # Debug: Print the JSON string being parsed
+		return "[Could not process, please try again]"
+	
+	var data = json.get_data()
+	print("Parsed JSON Data: ", data)
+	
+	if data == null:
+		return "DATA IS NULL"
+	
 	var current_message = "[Could not process, please try again]"
 	
-	if(dict != null):
-		if(dict["Emotion"] != null):
-			current_emotion = dict["Emotion"]
-		if(dict["Message"]):
-			current_message = dict["Message"]
-		if(dict["EmotionAmount"]):
-			print("EmotionAmount: " + str(dict["EmotionAmount"]))
+	if(data.has("Emotion")):
+		print("REACHED EMOTION")
+		current_emotion = data["Emotion"]
+	if(data.has("Message")):
+		print("REACHED MESSAGE")
+		current_message = data["Message"]
+	if(data.has("EmotionAmount")):
+		print("REACHED EMO AMOUNT")
+		print("EmotionAmount: " + str(data["EmotionAmount"]))
 	
 	return current_message
 
